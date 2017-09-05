@@ -86,36 +86,6 @@
             </objects>
             <point key="canvasLocation" x="1860" y="88"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="8Rb-9N-VXW">
-            <objects>
-                <viewController id="cvc-xG-LEn" customClass="HomeViewController" customModule="WifiClerkChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K1a-Ql-Nvb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2co-GL-SR9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VgX-wC-Ia1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3b8-wh-G4M">
-                                <rect key="frame" x="170" y="318" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="start:" destination="cvc-xG-LEn" eventType="touchDown" id="4NK-b3-0gN"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="7YA-TK-GgM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e7I-ra-42s" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="844" y="670"/>
-        </scene>
         <!--Video Chat View Controller-->
         <scene sceneID="EHy-Ka-jjk">
             <objects>

@@ -8,21 +8,19 @@
 
 import UIKit
 import MultipeerConnectivity
-enum ResponseValue: String {
-    case incomingCall = "incomingCall"
-    case callAccepted = "callAccepted"
-    case callRejected = "callRejected"
-}
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+import FSDK
+
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,ServiceManagerProtocol {
     @IBOutlet weak var connectionsLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     // Differentiates caller and receiver
     var isInitiator = false
     var peerListArray : [MCPeerID:DeviceModel] = [MCPeerID:DeviceModel]()
-    let bonjourService = ServiceManager.sharedServiceManager
+    let bonjourService = ServiceManager.getManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bonjourService.startAdvertising(type: "clerk")
         bonjourService.delegate = self
         tableView.register(UITableViewCell.self,
                            forCellReuseIdentifier: "Cell")
@@ -39,7 +37,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         if segue.destination.isKind(of: RTCVideoChatViewController.self){
             let destinationController:RTCVideoChatViewController = segue.destination as! RTCVideoChatViewController
             destinationController.isInitiator = unownedSelf.isInitiator
-            ServiceManager.sharedServiceManager.delegate = nil
+            bonjourService.delegate = nil
         }
     }
     
@@ -95,12 +93,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         self.isInitiator = true
     }
     
-    
-}
-
-extension ViewController : ServiceManagerProtocol {
-    
-    func connectedDevicesChanged(_ manager: ServiceManager, connectedDevices: [MCPeerID:DeviceModel]) {
+    func connectedDevicesChanged(_ manager: ServiceManager, connectedDevices: [MCPeerID : DeviceModel]) {
         let unownedSelf = self
         OperationQueue.main.addOperation { () -> Void in
             unownedSelf.connectionsLabel.text = "Me: \(UIDevice.current.name)"
@@ -109,6 +102,7 @@ extension ViewController : ServiceManagerProtocol {
         }
     }
     
+   
     func receivedData(_ manager: ServiceManager, peerID: MCPeerID, responseString: String) {
         let unownedSelf = self
         DispatchQueue.main.async {
@@ -125,6 +119,11 @@ extension ViewController : ServiceManagerProtocol {
                 print("Unknown color value received: \(responseString)")
             }
         }
+
     }
+    
+    
+    
 }
+
 

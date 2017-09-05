@@ -9,6 +9,17 @@
 
 import Foundation
 import AVFoundation
+@objc protocol WebrtcManagerProtocol {
+    
+    func offerSDPCreated(_ sdp:RTCSessionDescription)
+    func localStreamAvailable(_ stream:RTCMediaStream)
+    func remoteStreamAvailable(_ stream:RTCMediaStream)
+    func answerSDPCreated(_ sdp:RTCSessionDescription)
+    func iceCandidatesCreated(_ iceCandidate:RTCICECandidate)
+    func dataReceivedInChannel(_ data:Data)
+}
+
+
 class WebrtcManager: NSObject,RTCPeerConnectionDelegate,RTCSessionDescriptionDelegate {
     func peerConnection(_ peerConnection: RTCPeerConnection!, didSetSessionDescriptionWithError error: Error!) {
         
@@ -62,7 +73,7 @@ class WebrtcManager: NSObject,RTCPeerConnectionDelegate,RTCSessionDescriptionDel
     super.init()
     peerConnectionFactory = RTCPeerConnectionFactory.init()
     let iceServer = RTCICEServer.init(uri: URL(string: "stun:stun.l.google.com:19302"), username: "", password: "")
-    peerConnection = peerConnectionFactory?.peerConnection(withICEServers: [iceServer], constraints: RTCMediaConstraints(mandatoryConstraints: nil,optionalConstraints: [RTCPair.init(key: "DtlsSrtpKeyAgreement", value: "true")]), delegate: self)
+    peerConnection = peerConnectionFactory?.peerConnection(withICEServers: [iceServer!], constraints: RTCMediaConstraints(mandatoryConstraints: nil,optionalConstraints: [RTCPair.init(key: "DtlsSrtpKeyAgreement", value: "true")]), delegate: self)
   }
   
     func getFrontVideo() -> RTCVideoTrack
@@ -100,8 +111,8 @@ class WebrtcManager: NSObject,RTCPeerConnectionDelegate,RTCSessionDescriptionDel
     
     func swapBackVideo()
     {
-        self.localStream = self.peerConnection?.localStreams[0] as! RTCMediaStream
-        self.localVideoTrack = self.localStream?.videoTracks[0] as! RTCVideoTrack
+        self.localStream = self.peerConnection?.localStreams[0] as? RTCMediaStream
+        self.localVideoTrack = self.localStream?.videoTracks[0] as? RTCVideoTrack
         self.localStream?.removeVideoTrack(self.localVideoTrack)
         
         self.peerConnection?.remove(self.localStream)
@@ -114,8 +125,8 @@ class WebrtcManager: NSObject,RTCPeerConnectionDelegate,RTCSessionDescriptionDel
     
     func swapFrontVideo()
     {
-        self.localStream = self.peerConnection?.localStreams[0] as! RTCMediaStream
-        self.localVideoTrack = self.localStream?.videoTracks[0] as! RTCVideoTrack
+        self.localStream = self.peerConnection?.localStreams[0] as? RTCMediaStream
+        self.localVideoTrack = self.localStream?.videoTracks[0] as? RTCVideoTrack
         self.localStream?.removeVideoTrack(self.localVideoTrack)
         
         self.peerConnection?.remove(self.localStream)
@@ -144,8 +155,8 @@ class WebrtcManager: NSObject,RTCPeerConnectionDelegate,RTCSessionDescriptionDel
     
     func removeAudio()
     {
-        self.localStream = self.peerConnection?.localStreams[0] as! RTCMediaStream
-        self.localAudioTrack = self.localStream?.audioTracks[0] as! RTCAudioTrack
+        self.localStream = self.peerConnection?.localStreams[0] as? RTCMediaStream
+        self.localAudioTrack = self.localStream?.audioTracks[0] as? RTCAudioTrack
         self.localStream?.removeAudioTrack(self.localAudioTrack)
         
         self.peerConnection?.remove(self.localStream)
@@ -156,7 +167,7 @@ class WebrtcManager: NSObject,RTCPeerConnectionDelegate,RTCSessionDescriptionDel
     
     func addAudio()
     {
-        self.localStream = self.peerConnection?.localStreams[0] as! RTCMediaStream
+        self.localStream = self.peerConnection?.localStreams[0] as? RTCMediaStream
         self.localStream?.addAudioTrack(self.localAudioTrack)
         self.peerConnection?.remove(self.localStream)
         self.peerConnection?.add(self.localStream)
@@ -183,7 +194,7 @@ class WebrtcManager: NSObject,RTCPeerConnectionDelegate,RTCSessionDescriptionDel
     let pairOfferToReceiveAudio = RTCPair(key: "OfferToReceiveAudio", value: "true")
     let pairOfferToReceiveVideo = RTCPair(key: "OfferToReceiveVideo", value: "true")
     let pairDtlsSrtpKeyAgreement = RTCPair(key: "DtlsSrtpKeyAgreement", value: "true")
-    let peerConnectionConstraints = RTCMediaConstraints(mandatoryConstraints: [pairOfferToReceiveVideo,pairOfferToReceiveAudio], optionalConstraints: [pairDtlsSrtpKeyAgreement])
+    let peerConnectionConstraints = RTCMediaConstraints(mandatoryConstraints: [pairOfferToReceiveVideo!,pairOfferToReceiveAudio!], optionalConstraints: [pairDtlsSrtpKeyAgreement!])
     return peerConnectionConstraints!
   }
   

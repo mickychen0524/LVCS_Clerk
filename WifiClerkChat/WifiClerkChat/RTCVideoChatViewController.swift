@@ -38,13 +38,13 @@ class RTCVideoChatViewController: UIViewController,RTCEAGLVideoViewDelegate,Webr
   var   localVideoSize:CGSize?;
   var   remoteVideoSize:CGSize?;
   var   isZoom:Bool = false; //used for double tap remote view
-  let   serviceManager = ServiceManager.sharedServiceManager
+  let   serviceManager = ServiceManager.getManager()
   let   webrtcManager = WebrtcManager()
   var isInitiator = false;
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    ServiceManager.sharedServiceManager.delegate = self
+    serviceManager.delegate = self
     webrtcManager.delegate = self
     webrtcManager.initiator = self.isInitiator
     webrtcManager.startWebrtcConnection()
@@ -305,9 +305,11 @@ class RTCVideoChatViewController: UIViewController,RTCEAGLVideoViewDelegate,Webr
     serviceManager.sendDataToSelectedPeer(json as Dictionary<String, AnyObject>)
   }
   
-    func connectedDevicesChanged(_ manager : ServiceManager, connectedDevices: [MCPeerID:DeviceModel]){
-    
-  }
+
+    func connectedDevicesChanged(_ manager: ServiceManager, connectedDevices: [MCPeerID : DeviceModel]) {
+        
+    }
+
   func receivedData(_ manager : ServiceManager, peerID : MCPeerID, responseString: String){
     let dictionary = convertStringToDictionary(responseString)
     let keyValue = dictionary?.keys.first
