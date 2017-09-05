@@ -24,9 +24,9 @@
 		0D02F2A31F56E5F3009B3D36 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D02F2A21F56E5F3009B3D36 /* CoreVideo.framework */; };
 		0D02F2A51F56E648009B3D36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D02F2A41F56E648009B3D36 /* ViewController.swift */; };
 		0D98666C1F5EC58E00600139 /* libWebRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D98666B1F5EC58E00600139 /* libWebRTC.a */; };
-		0D9866B91F5ED54B00600139 /* FSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9866B81F5ED54B00600139 /* FSDK.framework */; };
-		0D9866BA1F5ED54F00600139 /* FSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9866B81F5ED54B00600139 /* FSDK.framework */; };
-		0D9866BB1F5ED54F00600139 /* FSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9866B81F5ED54B00600139 /* FSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0DE07A691F5F298D00C908AC /* FSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE07A681F5F298D00C908AC /* FSDK.framework */; };
+		0DE07A6A1F5F299100C908AC /* FSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE07A681F5F298D00C908AC /* FSDK.framework */; };
+		0DE07A6B1F5F299100C908AC /* FSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE07A681F5F298D00C908AC /* FSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0D9866BB1F5ED54F00600139 /* FSDK.framework in Embed Frameworks */,
+				0DE07A6B1F5F299100C908AC /* FSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,7 +67,7 @@
 		0D02F2A21F56E5F3009B3D36 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		0D02F2A41F56E648009B3D36 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D98666B1F5EC58E00600139 /* libWebRTC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWebRTC.a; sourceTree = "<group>"; };
-		0D9866B81F5ED54B00600139 /* FSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FSDK.framework; sourceTree = "<group>"; };
+		0DE07A681F5F298D00C908AC /* FSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +77,12 @@
 			files = (
 				0D02F2A31F56E5F3009B3D36 /* CoreVideo.framework in Frameworks */,
 				0D02F2A11F56E5EF009B3D36 /* VideoToolbox.framework in Frameworks */,
-				0D9866BA1F5ED54F00600139 /* FSDK.framework in Frameworks */,
+				0DE07A6A1F5F299100C908AC /* FSDK.framework in Frameworks */,
 				0D02F29F1F56E5EA009B3D36 /* libc++.tbd in Frameworks */,
 				0D02F29D1F56E5E6009B3D36 /* libsqlite3.0.tbd in Frameworks */,
 				0D98666C1F5EC58E00600139 /* libWebRTC.a in Frameworks */,
 				0D02F29B1F56E5E2009B3D36 /* SystemConfiguration.framework in Frameworks */,
-				0D9866B91F5ED54B00600139 /* FSDK.framework in Frameworks */,
+				0DE07A691F5F298D00C908AC /* FSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +179,7 @@
 		0D98666D1F5EC59D00600139 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				0D9866B81F5ED54B00600139 /* FSDK.framework */,
+				0DE07A681F5F298D00C908AC /* FSDK.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -397,13 +397,14 @@
 					"$(PROJECT_DIR)/WifiClerkChat",
 				);
 				INFOPLIST_FILE = WifiClerkChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WifiClerkChat",
 					"$(PROJECT_DIR)/WifiClerkChat/RTC",
 				);
+				OTHER_LDFLAGS = "-w";
 				PRODUCT_BUNDLE_IDENTIFIER = com.avviotech.labs.project.WifiClerkChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WifiClerkChat/WifiClerkChat-Bridging-Header.h";
@@ -424,13 +425,14 @@
 					"$(PROJECT_DIR)/WifiClerkChat",
 				);
 				INFOPLIST_FILE = WifiClerkChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WifiClerkChat",
 					"$(PROJECT_DIR)/WifiClerkChat/RTC",
 				);
+				OTHER_LDFLAGS = "-w";
 				PRODUCT_BUNDLE_IDENTIFIER = com.avviotech.labs.project.WifiClerkChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WifiClerkChat/WifiClerkChat-Bridging-Header.h";
