@@ -16,7 +16,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     // Differentiates caller and receiver
     var isInitiator = false
     var peerListArray : [MCPeerID:DeviceModel] = [MCPeerID:DeviceModel]()
-    let bonjourService = ServiceManager.getManager()
+    let bonjourService = ServiceManager.getManager(t: "clerk")
     
     override func viewDidLoad() {
         super.viewDidLoad()
