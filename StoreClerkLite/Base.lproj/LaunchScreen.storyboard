@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwB-Xd-TCE">
+                                <rect key="frame" x="16" y="128" width="343" height="411"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clerklogo215x215" translatesAutoresizingMaskIntoConstraints="NO" id="sp8-K6-sAM">
+                                        <rect key="frame" x="90" y="8" width="163" height="174"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="163" id="fFg-7m-fS1"/>
+                                            <constraint firstAttribute="height" constant="174" id="oDB-qo-hhL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Store Clerk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-9i-LtF">
+                                        <rect key="frame" x="0.0" y="243" width="343" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="s92-RS-47X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lazlo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th8-Kw-re0">
+                                        <rect key="frame" x="0.0" y="190" width="343" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="6cD-uC-BA3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eN-14-uDz">
+                                        <rect key="frame" x="0.0" y="358" width="343" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Dpc-8X-Lbf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="411" id="31F-ll-rMw"/>
+                                    <constraint firstAttribute="width" constant="343" id="C6Q-SI-E9q"/>
+                                    <constraint firstAttribute="trailing" secondItem="UQi-9i-LtF" secondAttribute="trailing" id="DxW-CQ-zfW"/>
+                                    <constraint firstItem="5eN-14-uDz" firstAttribute="leading" secondItem="zwB-Xd-TCE" secondAttribute="leading" id="E3i-CT-k3L"/>
+                                    <constraint firstItem="th8-Kw-re0" firstAttribute="leading" secondItem="zwB-Xd-TCE" secondAttribute="leading" id="OdY-Yo-utE"/>
+                                    <constraint firstItem="UQi-9i-LtF" firstAttribute="top" secondItem="th8-Kw-re0" secondAttribute="bottom" constant="8" id="PKs-jD-A49"/>
+                                    <constraint firstAttribute="trailing" secondItem="th8-Kw-re0" secondAttribute="trailing" id="QK9-7B-Pns"/>
+                                    <constraint firstItem="sp8-K6-sAM" firstAttribute="centerX" secondItem="zwB-Xd-TCE" secondAttribute="centerX" id="TyF-O5-ztg"/>
+                                    <constraint firstAttribute="trailing" secondItem="5eN-14-uDz" secondAttribute="trailing" id="Wgn-AT-uxt"/>
+                                    <constraint firstAttribute="bottom" secondItem="5eN-14-uDz" secondAttribute="bottom" constant="8" id="b8v-gM-PwR"/>
+                                    <constraint firstItem="sp8-K6-sAM" firstAttribute="top" secondItem="zwB-Xd-TCE" secondAttribute="top" constant="8" id="dTG-Nc-7sv"/>
+                                    <constraint firstItem="UQi-9i-LtF" firstAttribute="leading" secondItem="zwB-Xd-TCE" secondAttribute="leading" id="qBQ-Mi-Vlr"/>
+                                    <constraint firstItem="th8-Kw-re0" firstAttribute="top" secondItem="sp8-K6-sAM" secondAttribute="bottom" constant="8" id="rUV-hp-mNE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zwB-Xd-TCE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nDR-iA-ymz"/>
+                            <constraint firstItem="zwB-Xd-TCE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="t0B-Yl-6RX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clerklogo215x215" width="215" height="215"/>
+    </resources>
+</document>

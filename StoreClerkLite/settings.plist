@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+<!--    <key>devBrandLicenseCode</key>-->
+<!--    <string>n1oJ6u4cKeQwCvGg5ZrxHJaMOoQ=:LJBVQWSAQFD8CVEG386UZEV5HTR3ELUSA5E5EFHFYEV99YG68F3Q1EQH78MQ7DDQQZ1A7GRE6TFRUJRV6NRRGJUC6NTXTDJC6NWRS4VB6NRXYGFQ6GS3HARV6MERTA</string>-->
+<!--    <key>BrandLicenseCode</key>-->
+<!--    <string>n1oJ6u4cKeQwCvGg5ZrxHJaMOoQ=:LJBVQWSAQFD8CVEG386UZEV5HTR3ELUSA5E5EFHFYEV99YG68F3Q1EQH78MQ7DDQQZ1A7GRE6TFRUJRV6NRRGJUC6NTXTDJC6NWRS4VB6NRXYGFQ6GS3HARV6MERTA</string>-->
+<!--    <key>token</key>-->
+<!--    <string>CmGEsd9mJM6T+IB0pWnYd3cihuE=:QU2GDTCH2XQRKR66GABNMNEE7G7TMC69LQJB6ZGGYMVNPVJHPXT5F1EQH2HU2EGQPKD1AUDUEXMWXW6RR6NW3A2RV6NTXJAVCNNWRHGFZNNQ3NGUWNKTRA6JC68RRYA</string>-->
+<!--    <key>serverBaseURL</key>-->
+<!--    <string>https://demo.services.32point6.com</string>-->
+<!--    <key>devToken</key>-->
+<!--    <string>n1oJ6u4cKeQwCvGg5ZrxHJaMOoQ=:VEMZGC9M7HL72RQYAAY94MJRPNGMLLN9R34ZM8W3QEJ935BH3GFQ1EQH4N7VPZH56F1AA4VV2UYRGGJR6NRRYDFV6NTXS8UZNNQ324RC6NRRGGUZXUURA4RZX6AXHA</string>-->
+<!--    <key>devServerBaseUrl</key>-->
+<!--    <string>https://dev.services.32point6.com</string>-->
+
+	<key>devEndpoint</key>
+	<true/>
+	<key>serverBaseURLDev</key>
+	<string>https://dev.services.32point6.com</string>
+	<key>serverBaseURLDemo</key>
+	<string>https://demo.services.32point6.com</string>
+	<key>serverBaseURL</key>
+	<string>https://services.32point6.com</string>
+	<key>authorityLicenseDev</key>
+	<string>n1oJ6u4cKeQwCvGg5ZrxHJaMOoQ=:VEMZGC9M7HL72RQYAAY94MJRPNGMLLN9R34ZM8W3QEJ935BH3GFQ1EQH4N7VPZH56F1AA4VV2UYRGGJR6NRRYDFV6NTXS8UZNNQ324RC6NRRGGUZXUURA4RZX6AXHA</string>
+	<key>authorityLicenseDemo</key>
+	<string>CmGEsd9mJM6T+IB0pWnYd3cihuE=:QU2GDTCH2XQRKR66GABNMNEE7G7TMC69LQJB6ZGGYMVNPVJHPXT5F1EQH2HU2EGQPKD1AUDUEXMWXW6RR6NW3A2RV6NTXJAVCNNWRHGFZNNQ3NGUWNKTRA6JC68RRYA</string>
+	<key>authorityLicense</key>
+	<string>CmGEsd9mJM6T+IB0pWnYd3cihuE=:QU2GDTCH2XQRKR66GABNMNEE7G7TMC69LQJB6ZGGYMVNPVJHPXT5F1EQH2HU2EGQPKD1AUDUEXMWXW6RR6NW3A2RV6NTXJAVCNNWRHGFZNNQ3NGUWNKTRA6JC68RRYA</string>
+	<key>userLicenseDev</key>
+	<string></string>
+	<key>userLicenseDemo</key>
+	<string></string>
+	<key>userLicense</key>
+	<string></string>
+	<key>fbBearerTokenDev</key>
+	<string></string>
+	<key>fbBearerTokenDemo</key>
+	<string></string>
+	<key>fbBearerToken</key>
+	<string></string>
+	<key>fbAccessTokenDev</key>
+	<string></string>
+	<key>fbAccessTokenDemo</key>
+	<string></string>
+	<key>fbAccessToken</key>
+	<string></string>
+	<key>fbAppIdDev</key>
+	<string></string>
+	<key>fbAppIdDemo</key>
+	<string></string>
+	<key>fbAppId</key>
+	<string></string>
+	<key>cameraPermissionState</key>
+	<false/>
+	<key>microphonePermissionState</key>
+	<false/>
+	<key>locationPermissionState</key>
+	<false/>
+	<key>notificationPermissionState</key>
+	<false/>
+	<key>loginState</key>
+	<false/>
+	<key>activateState</key>
+	<false/>
+	<key>registerState</key>
+	<false/>
+	<key>BLEDistanceFilter</key>
+	<integer>1609</integer>
+</dict>
+</plist>

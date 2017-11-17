@@ -1,0 +1,94 @@
+PODS:
+  - Alamofire (4.5.1)
+  - Charts (3.0.4):
+    - Charts/Core (= 3.0.4)
+  - Charts/Core (3.0.4)
+  - DatePickerDialog (2.0)
+  - DropDown (2)
+  - GzipSwift (4.0.0)
+  - HockeySDK/AllFeaturesLib (5.0.0)
+  - Kingfisher (4.1.0)
+  - PPBlinkID (2.11.0)
+  - QRCode (2.0)
+  - ReachabilitySwift (3)
+  - Refresher (0.7.0)
+  - SCLAlertView (0.7.0)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
+  - SwiftValidator (4.0.0)
+  - SwiftyJSON (3.1.4)
+  - Toast-Swift (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - DatePickerDialog
+  - DropDown (from `https://github.com/nahuelDeveloper/DropDown.git`, branch `master`)
+  - GzipSwift (~> 4.0.0)
+  - HockeySDK/AllFeaturesLib
+  - Kingfisher
+  - PPBlinkID (~> 2.11.0)
+  - QRCode (from `https://github.com/aschuch/QRCode.git`, branch `master`)
+  - ReachabilitySwift (~> 3)
+  - Refresher
+  - SCLAlertView (from `https://github.com/ahmedsafadii/SCLAlertView-Swift.git`)
+  - SDWebImage (~> 4.0)
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+  - SwiftyJSON
+  - Toast-Swift (from `https://github.com/scalessec/Toast-Swift.git`, branch `feature/Swift-4`)
+
+EXTERNAL SOURCES:
+  DropDown:
+    :branch: master
+    :git: https://github.com/nahuelDeveloper/DropDown.git
+  QRCode:
+    :branch: master
+    :git: https://github.com/aschuch/QRCode.git
+  SCLAlertView:
+    :git: https://github.com/ahmedsafadii/SCLAlertView-Swift.git
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
+  Toast-Swift:
+    :branch: feature/Swift-4
+    :git: https://github.com/scalessec/Toast-Swift.git
+
+CHECKOUT OPTIONS:
+  DropDown:
+    :commit: 578fa2e8bd4e6be2214e0eafae4a946af360d2fc
+    :git: https://github.com/nahuelDeveloper/DropDown.git
+  QRCode:
+    :commit: 601af09fa394da662753a1d0bdfeb7d11e54e7e7
+    :git: https://github.com/aschuch/QRCode.git
+  SCLAlertView:
+    :commit: 90826ee643e319375aadd6415aaa0e8fce643766
+    :git: https://github.com/ahmedsafadii/SCLAlertView-Swift.git
+  SwiftValidator:
+    :commit: 6cff6cac3e02a617f7cf11323e18526a117d5673
+    :git: https://github.com/jpotts18/SwiftValidator.git
+  Toast-Swift:
+    :commit: 4a719a66b0e1f682fdb3c0a348c6988926fe4501
+    :git: https://github.com/scalessec/Toast-Swift.git
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  Charts: 0705898046257443f0afbbc3179f4b67507b6e48
+  DatePickerDialog: 5e1c24d9fe6506cd45dbc573eed7b0a251b1c09d
+  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
+  GzipSwift: 1aab4a3d3b2f2509f78c7405bbaf535184ac6c7f
+  HockeySDK: 82bf8dcbe1af3c87c24dc98924fcf2e2ba5be8c4
+  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
+  PPBlinkID: 5b0f21f8f4e0aad0c49947e7095be2027c3421ee
+  QRCode: 282441d0cfe8c4c1766b7578361fe93f72757685
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Refresher: a72fdd35f0e1854d787eb5eb6853dd3f6d81c1e5
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
+
+PODFILE CHECKSUM: 38d96531309ff48043368c864c4e65afabf46358
+
+COCOAPODS: 1.3.1
